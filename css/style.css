@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  background: lightcyan;
+  font-family: Arial, sans-serif;
+  margin: auto;
+  padding: 100px 50px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 20px 600px;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+}
+ul {
+  list-style-position: inside;
+  padding: 0;
+}
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+}
