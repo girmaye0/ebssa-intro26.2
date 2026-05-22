@@ -12,6 +12,7 @@ nav {
   z-index: 1000;
   background-color: lightcyan;
   width: 100%;
+  border-radius: 20px;
 }
 
 nav ul {
@@ -44,6 +45,7 @@ img {
   background-color: lightblue;
   padding: 20px 15px;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 #experience .header-row {
@@ -114,4 +116,25 @@ h2 {
   font-size: 30px;
   font-weight: 600;
   color: yellowgreen;
+}
+#footer {
+  background-color: lightseagreen;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+#skills h2 {
+  text-align: left;
+}
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(15px, 1fr));
+  gap: 12px;
+  padding: 15px;
+  margin: 0px 50px;
+  list-style: none;
+  text-align: left;
+  background-color: goldenrod;
+  border-radius: 25px;
 }
