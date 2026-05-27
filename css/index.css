@@ -138,3 +138,112 @@ h2 {
   background-color: goldenrod;
   border-radius: 25px;
 }
+
+.hidden {
+  display: none !important;
+}
+
+/* #Message {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+}
+
+#Message h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#Message form {
+  display: flex;
+  flex-direction: column;
+}
+
+#Message label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+#name,
+#email,
+#message {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#name:focus,
+#email:focus,
+#message:focus {
+  border-color: #191970;
+  outline: none;
+}
+
+#message {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#Message button[type="submit"] {
+  background-color: #191970;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#Message button[type="submit"]:hover {
+  background-color: #2e40a6;
+} */
+
+/* #Message form {
+  display: flex;
+  flex-direction: column;
+}
+#name:focus,
+#email:focus,
+#message:focus {
+  border-color: #191970;
+  outline: none;
+} */
+#Message form {
+  background-color: #f9f9f9;
+  padding: 30px;
+}
+#name,
+#email,
+#message {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+button {
+  padding: 5px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: seagreen;
+}
