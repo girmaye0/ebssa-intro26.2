@@ -34,9 +34,9 @@ const messageForm = document.getElementsByName("leave_message")[0];
 messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const name = event.target.userName.value;
-  const email = event.target.userEmail.value;
-  const message = event.target.userMessage.value;
+  const name = event.target.usersName.value;
+  const email = event.target.usersEmail.value;
+  const message = event.target.usersMessage.value;
 
   console.log("Name:", name);
   console.log("Email:", email);
