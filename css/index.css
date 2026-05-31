@@ -1,11 +1,13 @@
 body {
   text-align: center;
   background: white;
-  font-family: noto-serif;
+  font-family: "Noto Serif", serif;
   color: black;
   margin: auto;
-  padding: 100px 50px;
+  padding: 60px 5%;
+  max-width: 1200px;
 }
+
 nav {
   position: sticky;
   top: 0;
@@ -20,7 +22,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 30px;
+  padding: 20px;
   margin: 0;
 }
 
@@ -28,19 +30,24 @@ ul {
   list-style-position: inside;
   padding: 0;
 }
+
 img {
-  width: 300px;
-  height: 200px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
 }
+
 #about {
   margin-bottom: 20px;
   padding: 10px;
 }
+
 #skills {
   margin-bottom: 20px;
   padding: 10px;
 }
+
 #experience {
   background-color: lightblue;
   padding: 20px 15px;
@@ -85,38 +92,44 @@ img {
   margin-bottom: 20px;
   padding: 10px;
 }
+
 #connect {
   margin-bottom: 20px;
   padding: 10px;
 }
+
 #connect ul {
   display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0px;
-  text-align: center;
-  margin: 10px 600px;
+  margin: 20px 0;
 }
+
 #connect li {
   padding: 10px;
-  gap: 10px;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
+
 #connect img {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
+
 h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
   color: green;
   font-style: oblique;
 }
+
 h2 {
   font-size: 30px;
   font-weight: 600;
   color: yellowgreen;
 }
+
 #footer {
   background-color: lightseagreen;
   padding: 20px;
@@ -127,14 +140,96 @@ h2 {
 #skills h2 {
   text-align: left;
 }
+
 #skills ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(15px, 1fr));
   gap: 12px;
-  padding: 15px;
-  margin: 0px 50px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
   list-style: none;
   text-align: left;
   background-color: goldenrod;
   border-radius: 25px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#Message form {
+  background-color: #f9f9f9;
+  padding: 30px;
+}
+
+#name,
+#email,
+#message {
+  width: 300px;
+  max-width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+button {
+  padding: 5px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: seagreen;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .job {
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 35px;
+    gap: 5px;
+  }
+
+  .job-title,
+  .job-description,
+  .job-date {
+    flex: 1 1 100%;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .job-date {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+  }
+
+  #footer {
+    text-align: center;
+  }
 }
