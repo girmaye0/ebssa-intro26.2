@@ -95,3 +95,26 @@ messageForm.addEventListener("submit", function (event) {
   toggleMessageSection();
   messageForm.reset();
 });
+
+//Fetch GitHub repositories
+fetch("https://api.github.com/users/girmaye0/repos")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+
+  .then((repositories) => {
+    console.log("Fetched repositories:", repositories);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error("Error loading repositories:", error.message);
+  });
