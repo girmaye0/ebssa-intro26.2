@@ -21,23 +21,54 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: lightcyan;
   width: 100%;
-  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul {
+nav ul.page-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+
+  background: lightgray;
+  padding: 15px 40px;
+  margin: 0;
+}
+
+nav ul:not(.page-nav) {
   list-style-type: none;
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+
+  background-color: lightcyan;
+  padding: 18px;
   margin: 0;
+  border-radius: 0 0 10px 10px;
 }
 
 ul {
   list-style-position: inside;
   padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: none;
+}
+
+nav ul li a.active,
+nav ul li a.scroll-active {
+  font-weight: bold;
+  color: seagreen;
 }
 
 img {
@@ -210,6 +241,9 @@ button {
 button:hover {
   background-color: seagreen;
 }
+#message_form {
+  padding: 30px 0px 0px 0px;
+}
 
 @media (max-width: 768px) {
   #about,
@@ -218,7 +252,7 @@ button:hover {
   #projects,
   #message_form,
   #connect {
-    scroll-margin-top: 180px;
+    scroll-margin-top: 240px;
   }
   body {
     padding: 30px 15px;
@@ -228,11 +262,18 @@ button:hover {
     font-size: 32px;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
+  nav ul.page-nav {
+    justify-content: center;
+    padding: 12px 15px;
   }
+
+  nav ul:not(.page-nav) {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 0;
+  }
+
   #experience .header-row {
     flex-direction: column;
     align-items: flex-start;
@@ -262,11 +303,14 @@ button:hover {
     grid-template-columns: 1fr;
     margin: 0 10px;
   }
-  #projects {
+  #projects ul {
     grid-template-columns: 1fr;
     margin: 0 10px;
   }
   #footer {
     text-align: center;
+  }
+  #message_form {
+    padding: 30px 0px 0px 0px;
   }
 }

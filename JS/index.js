@@ -117,4 +117,12 @@ fetch("https://api.github.com/users/girmaye0/repos")
   })
   .catch((error) => {
     console.error("Error loading repositories:", error.message);
+    const projectSection = document.getElementById("projects");
+    if (projectSection) {
+      const errorMessage = document.createElement("p");
+      errorMessage.innerText = `Sorry! Couldn't load projects at this time: ${error.message}`;
+      errorMessage.style.color = "red";
+      errorMessage.style.fontWeight = "bold";
+      projectSection.appendChild(errorMessage);
+    }
   });
