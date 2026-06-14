@@ -16,6 +16,7 @@ Welcome to my web development repository! This project features a personal portf
 ## 📁 Project Structure
 
 📂Ebssa-Intro26.2/
+config.example.js
 index.html
 openApi.html
 gitignore
