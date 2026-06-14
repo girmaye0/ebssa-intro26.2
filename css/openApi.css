@@ -5,7 +5,17 @@ body {
   margin: 0;
   padding: 30px 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
+
+main,
+.main-content-wrapper {
+  flex: 1;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -123,6 +133,15 @@ select:focus {
 
 .hidden {
   display: none !important;
+}
+
+#image-loading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2a6f97;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
 }
 #footer {
   background-color: lightseagreen;

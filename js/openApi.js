@@ -5,6 +5,7 @@ const dogName = document.getElementById("dog-name");
 const dogPurpose = document.getElementById("dog-purpose");
 const dogTemperament = document.getElementById("dog-temperament");
 const errorMessage = document.getElementById("error-message");
+const imageLoading = document.getElementById("image-loading");
 
 const openDogApiKey = secretDogApiKey;
 const headers = new Headers({
@@ -62,6 +63,10 @@ function displaySelectedBreedDetails(breedId) {
     return;
   }
 
+  dogCard.classList.remove("hidden"); //
+  imageLoading.classList.remove("hidden");
+  dogImage.classList.add("hidden");
+
   fetch(`https://api.thedogapi.com/v1/breeds/${breedId}`, requestOptions)
     .then((response) => {
       if (!response.ok) {
@@ -109,16 +114,18 @@ function displaySelectedBreedDetails(breedId) {
         );
       }
 
+      imageLoading.classList.add("hidden");
+      dogImage.classList.remove("hidden");
+
       dogImage.src = imageInfo.url;
       dogImage.alt = breedInfo.name;
       dogName.innerText = breedInfo.name;
       dogPurpose.innerText =
         breedInfo.bred_for || "Companion / Working Family Pet";
       dogTemperament.innerText = breedInfo.temperament || "Friendly, Active";
-
-      dogCard.classList.remove("hidden");
     })
     .catch((error) => {
+      imageLoading.classList.add("hidden");
       showError(`Could not render dog profile data. ${error.message}`);
     });
 }
@@ -128,16 +135,3 @@ breedSelect.addEventListener("change", (event) => {
 });
 
 loadBreedDropdown();
-
-//footer
-const bodyElement = document.querySelector("body");
-const footerElement = document.createElement("footer");
-footerElement.id = "footer";
-bodyElement.appendChild(footerElement);
-
-const today = new Date();
-const thisYear = today.getFullYear();
-const footer = document.querySelector("footer");
-const copyright = document.createElement("p");
-copyright.innerHTML = `Copyright &copy; ${thisYear}  Girma Ebssa!`;
-footer.appendChild(copyright);
