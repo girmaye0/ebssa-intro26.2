@@ -294,11 +294,6 @@ button:hover {
     text-align: left;
   }
 
-  .job-date {
-    font-size: 0.9em;
-    color: #666;
-  }
-
   #skills ul {
     grid-template-columns: 1fr;
     margin: 0 10px;
