@@ -100,7 +100,13 @@ fetch("https://api.github.com/users/girmaye0/repos")
     const projectList = projectSection.querySelector("ul");
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li");
-      project.innerText = repositories[i].name;
+      const repoLink = document.createElement("a");
+      repoLink.href = repositories[i].html_url;
+      repoLink.target = "_blank";
+      repoLink.textContent = repositories[i].name;
+      repoLink.target = "_blank";
+      repoLink.rel = "noopener noreferrer";
+      project.appendChild(repoLink);
       projectList.appendChild(project);
     }
   })
