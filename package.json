@@ -1,0 +1,24 @@
+{
+  "name": "ebssa-intro26.2",
+  "version": "1.0.0",
+  "description": "Ebssa Girma!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girmaye0/ebssa-intro26.2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/girmaye0/ebssa-intro26.2/issues"
+  },
+  "homepage": "https://github.com/girmaye0/ebssa-intro26.2#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

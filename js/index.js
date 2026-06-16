@@ -1,15 +1,4 @@
-const bodyElement = document.querySelector("body");
-const footerElement = document.createElement("footer");
-footerElement.id = "footer";
-bodyElement.appendChild(footerElement);
-
-const today = new Date();
-const thisYear = today.getFullYear();
-const footer = document.querySelector("footer");
-const copyright = document.createElement("p");
-copyright.innerHTML = `Copyright &copy; ${thisYear}  Girma Ebssa!`;
-footer.appendChild(copyright);
-
+// Populate skills section
 const skills = [
   "HTML",
   "CSS",
@@ -111,10 +100,24 @@ fetch("https://api.github.com/users/girmaye0/repos")
     const projectList = projectSection.querySelector("ul");
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li");
-      project.innerText = repositories[i].name;
+      const repoLink = document.createElement("a");
+      repoLink.href = repositories[i].html_url;
+      repoLink.target = "_blank";
+      repoLink.textContent = repositories[i].name;
+      repoLink.target = "_blank";
+      repoLink.rel = "noopener noreferrer";
+      project.appendChild(repoLink);
       projectList.appendChild(project);
     }
   })
   .catch((error) => {
     console.error("Error loading repositories:", error.message);
+    const projectSection = document.getElementById("projects");
+    if (projectSection) {
+      const errorMessage = document.createElement("p");
+      errorMessage.innerText = `Sorry! Couldn't load projects at this time: ${error.message}`;
+      errorMessage.style.color = "red";
+      errorMessage.style.fontWeight = "bold";
+      projectSection.appendChild(errorMessage);
+    }
   });
