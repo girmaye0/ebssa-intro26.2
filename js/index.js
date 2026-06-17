@@ -104,7 +104,6 @@ fetch("https://api.github.com/users/girmaye0/repos")
       repoLink.href = repositories[i].html_url;
       repoLink.target = "_blank";
       repoLink.textContent = repositories[i].name;
-      repoLink.target = "_blank";
       repoLink.rel = "noopener noreferrer";
       project.appendChild(repoLink);
       projectList.appendChild(project);

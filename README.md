@@ -42,7 +42,7 @@ gitignore
 index.js
 openApi.js
 config.js
-📂cs/
+📂css/
 index.css
 openApi.css
 📂images/

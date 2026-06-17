@@ -1,4 +1,5 @@
 const breedSelect = document.getElementById("breed-select");
+const fetchButton = document.getElementById("fetch-dog-btn");
 const dogCard = document.getElementById("dog-card");
 const dogImage = document.getElementById("dog-image");
 const dogName = document.getElementById("dog-name");
@@ -129,9 +130,11 @@ function displaySelectedBreedDetails(breedId) {
       showError(`Could not render dog profile data. ${error.message}`);
     });
 }
-
-breedSelect.addEventListener("change", (event) => {
-  displaySelectedBreedDetails(event.target.value);
+fetchButton.addEventListener("click", () => {
+  const selectedBreedId = breedSelect.value;
+  displaySelectedBreedDetails(selectedBreedId);
+  // breedSelect.addEventListener("change", (event) => {
+  //   displaySelectedBreedDetails(event.target.value);
 });
 
 loadBreedDropdown();
